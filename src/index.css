@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --tv-black: #000000;
+    --tv-bg: #131722;
+    --tv-card: #1e222d;
+    --tv-border: #2a2e39;
+    --tv-muted: #787b86;
+    --tv-text: #d1d4dc;
+    --tv-light: #f0f3fa;
+    --tv-blue: #2962ff;
+    --tv-hoverBlue: #1e53e5;
+    --tv-green: #089981;
+    --tv-red: #f23645;
+    --tv-purple: #b845ed;
+    --tv-cyan: #00bcd4;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
+    background-color: #000000;
+    color: #d1d4dc;
+  }
+}
+
+/* Custom TradingView gradient typography */
+.gradient-hero-text {
+  background: linear-gradient(90deg, #2962ff 0%, #00b4d8 35%, #9d4edd 70%, #f72585 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-border-glow {
+  position: relative;
+}
+.gradient-border-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, rgba(41, 98, 255, 0.4) 0%, rgba(224, 64, 251, 0.2) 50%, transparent 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Subtle grid pattern background */
+.hero-grid-bg {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.chart-grid-lines {
+  background-image: linear-gradient(to right, rgba(42, 46, 57, 0.4) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(42, 46, 57, 0.4) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Candlesticks */
+.candlestick-green {
+  background-color: #089981;
+  box-shadow: 0 0 8px rgba(8, 153, 129, 0.4);
+}
+.candlestick-red {
+  background-color: #f23645;
+  box-shadow: 0 0 8px rgba(242, 54, 69, 0.35);
+}
+
+/* 3D Perspective for hero mockup */
+.perspective-mockup {
+  transform: perspective(1200px) rotateX(15deg) scale(0.98);
+  transform-origin: top center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.perspective-mockup:hover {
+  transform: perspective(1200px) rotateX(8deg) scale(0.995);
+}
+
+/* Custom scrollbars for dark mode trading UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #131722;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2e39;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #363c4e;
+}

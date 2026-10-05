@@ -1,0 +1,6 @@
+{
+  "name": "Tradingverse - Next-Gen Trading & Supercharts Platform",
+  "description": "Experience professional Supercharts trading, direct broker routing, live paper trading simulation, and community tournaments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
